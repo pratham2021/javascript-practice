@@ -7,7 +7,22 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
+    let freqDict = {};
+    
+    numbers.forEach((number) => {
+        if (number in freqDict) {
+            freqDict[number] += 1;
+        }
+        else {
+            freqDict[number] = 1;
+        }
+    });
+
+    const majorityElement = Object.keys(freqDict).reduce((a, b) => {
+        return freqDict[b] > freqDict[a] ? b : a;
+    }, Object.keys(freqDict)[0]);
+
+    return majorityElement;
 }
 
 const tests = [

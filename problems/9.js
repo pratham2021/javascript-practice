@@ -15,7 +15,8 @@ function problem(students) {
         return student;
     });
 
-    mappedStudents.sort((a, b) => a.name - b.name);
+    mappedStudents.sort((firstStudent, secondStudent) => firstStudent.name - secondStudent.name);
+
     return mappedStudents;
 }
 

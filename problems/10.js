@@ -7,7 +7,10 @@
  * @example "abcdef" -> "ABCdef"
 */
 function problem(str) {
-    return null;
+    const middleIndex = Math.floor(str.length / 2);
+    const firstHalf = str.slice(0, middleIndex).toUpperCase();
+    const secondHalf = str.slice(middleIndex).toLowerCase();
+    return firstHalf + secondHalf;
 }
 
 const tests = [

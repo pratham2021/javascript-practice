@@ -11,7 +11,22 @@
  * @example "apple" -> "$1.29"
 */
 function problem(fruit) {
-    return null;
+    lower_case_fruit = fruit.trim().toLowerCase();
+
+    if (lower_case_fruit === "orange") {
+        return "$1";
+    }
+    else if (lower_case_fruit === "apple") {
+        return "$1.29";
+    }
+    else if (lower_case_fruit === "grapes") {
+        return "$1.50";
+    }
+    else if (lower_case_fruit === "banana") {
+        return "$0.75";
+    }
+
+    return "$2";
 }
 
 const tests = [
