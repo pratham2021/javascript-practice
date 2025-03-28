@@ -7,7 +7,8 @@
  * @example [1, 2, 3, 4, 5, 6, 7, 8, 9] -> [3, 6, 9]
  */
 function problem(numbers) {
-    return null;
+    const filteredNumbers = numbers.filter(num => num % 3 === 0);
+    return filteredNumbers;
 }
 
 const tests = [
