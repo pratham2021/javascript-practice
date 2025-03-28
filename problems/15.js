@@ -11,25 +11,22 @@
  * @example 15 -> [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz"]
 */
 function problem(number) {
-    let newArray = new Array(number.length);
+    var newArray = new Array(number);
 
-    for (let i = 0; i < number.length; i++) {
-        let quotient = i + 1;
-        if (quotient % 3 === 0 && quotient % 5 === 0) {
+    for (let i = 0; i < number; i++) {
+        const counter = i + 1;
+
+        if (counter % 3 === 0 && counter % 5 === 0) {
             newArray[i] = "FizzBuzz";
-            continue;
         }
-        else if (quotient % 3 === 0) {
+        else if (counter % 3 === 0) {
             newArray[i] = "Fizz";
-            continue;
         }
-        else if (quotient % 5 === 0) {
+        else if (counter % 5 === 0) {
             newArray[i] = "Buzz";
-            continue;
         }
         else {
-            newArray[i] = quotient;
-            continue;
+            newArray[i] = i + 1;
         }
     }
 

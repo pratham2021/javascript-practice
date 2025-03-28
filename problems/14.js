@@ -10,11 +10,12 @@ function problem(numbers) {
     let freqDict = {};
     
     numbers.forEach((number) => {
-        if (number in freqDict) {
-            freqDict[number] += 1;
+        real_number = parseInt(number)
+        if (real_number in freqDict) {
+            freqDict[real_number] += 1;
         }
         else {
-            freqDict[number] = 1;
+            freqDict[real_number] = 1;
         }
     });
 
@@ -22,7 +23,7 @@ function problem(numbers) {
         return freqDict[b] > freqDict[a] ? b : a;
     }, Object.keys(freqDict)[0]);
 
-    return majorityElement;
+    return parseInt(majorityElement);
 }
 
 const tests = [

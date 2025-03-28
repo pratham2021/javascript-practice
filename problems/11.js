@@ -8,8 +8,8 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    const normalizedStr = str.replace(/[^a-zA-Z]/g, '').toLowerCase();
-    return normalizedStr == normalizedStr.split(" ").reverse().join("");
+    const filteredString = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    return filteredString === filteredString.split('').reverse().join('');
 }
 
 const tests = [
